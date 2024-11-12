@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         isPalindrome(-1221);
+        isPerfectNumber(28);
     }
 
     public static boolean isPalindrome(int num) {
@@ -21,5 +22,18 @@ public class Main {
         System.out.println("true");
         return true;
     }
+
+    public static boolean isPerfectNumber(int num) {
+        int sum = 0;
+        for (int i = 1; i < num; i++){
+            if (num % i == 0) {
+                sum += i;
+                System.out.println("sum:" + sum);
+            }
+        }
+        System.out.println("sum:" + sum);
+        return sum == num;
+    }
+
 
 }
